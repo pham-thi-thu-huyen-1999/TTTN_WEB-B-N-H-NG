@@ -1,0 +1,54 @@
+<div class="maunen" id='Sign-in-tab'>
+  <br>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-6 maunen2">
+        <form style="border:1px solid #ccc" #userSignupForm='ngForm'
+          (ngSubmit)="userSignupForm.valid && onSubmit(userSignupForm)">
+          <h1>Sign Up</h1>
+          <p>Please fill in this form to create an account.</p>
+          <hr>
+
+          <label data-error="required field" for="email"><b>Email</b></label>
+          <input class="validate" type="text" placeholder="Enter Email" name="email" #email [(ngModel)]='_user.email'
+            required style="border-bottom-color: red">
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" #password [(ngModel)]='_user.password'
+            required style="border-bottom-color: red" minlength="6">
+
+          <label for="psw-repeat"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="reapeatPassword"
+            [(ngModel)]='_user.reapeatPassword' required>
+
+          <label for="psw-repeat"><b>User Name</b></label>
+          <input type="password" placeholder="UserName" name="username required" #username [(ngModel)]='_user.username'>
+
+            <label for="address"><b>Address</b></label>
+          <input type="text" placeholder="address" name="address" required>
+
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+          </label>
+          <button [disabled]='!userSignupForm.valid' type="submit" class="btn btn-warning btn-lg btn-block mt-4"> Sign
+            Up</button>
+        </form>
+      </div>
+
+    </div>
+    <div class="col-sm-6 maunen2">
+      <button type="button" class="btn btn-warning btn-lg btn-block mt-4">Cancel</button>
+      <div class="mod-login-third">
+        <div class="mod-third-party-login mod-login-third-btns">
+          <div class="mod-third-party-login-line mt-2">
+            <span>Hoặc, đăng nhập bằng:</span>
+          </div>
+          <div class="mod-third-party-login-bd">
+            <button type="button" class="btn btn-primary btn-lg btn-block mt-3">Facebook</button>
+            <button type="button" class="btn btn-danger btn-lg btn-block mt-2">Google</button>
+            <br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

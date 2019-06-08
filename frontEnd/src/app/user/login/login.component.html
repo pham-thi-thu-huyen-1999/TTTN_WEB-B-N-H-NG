@@ -1,0 +1,42 @@
+<div class="maunen" id='Sign-in-tab'>
+    <br>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-6 maunen2">
+                <form #signinForm='ngForm' (ngSubmit)='onSubmit(email.value, password.value)'  > 
+                    <div class="form-group" fullname>
+                        <label for="fullname">Tài khoản Email </label>
+                        <input name='tk' type="email" class="form-control" id="fullname" aria-describedby="emailHelp" #email
+                            placeholder="Vui lòng nhập tài khoản của bạn" [(ngModel)]="_user.email">
+
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="exampleInputPassword1">Mật khẩu*</label>
+                        <input type="password" name="mk" #password  [(ngModel)]="_user.password" class="form-control"
+                            placeholder="Vui lòng nhập mật khẩu của bạn">
+                        <div class="canhphai mt-3"><a href="#">Quên mật khẩu?</a></div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-6 maunen2">
+                <a>
+                    <button type="button" class="btn btn-warning btn-lg btn-block mt-4" (click)="login()">ĐĂNG
+                        NHẬP</button>
+                </a>
+                <div class="mod-login-third">
+                    <div class="mod-third-party-login mod-login-third-btns">
+                        <div class="mod-third-party-login-line mt-2">
+                            <span>Hoặc, đăng nhập bằng:</span>
+                        </div>
+                        <div class="mod-third-party-login-bd">
+                            <button type="button" class="btn btn-primary btn-lg btn-block mt-3">Facebook</button>
+                            <button type="button" class="btn btn-danger btn-lg btn-block mt-2">Google</button>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
